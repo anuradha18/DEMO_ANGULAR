@@ -1,0 +1,47 @@
+.mainComponent{
+    margin: 10px auto;
+    font-size: 14px;
+}
+.example-full-width {
+    width: 100%;
+  }
+.width100{
+    width: 100%;
+}
+  
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+.header{
+    padding: 20px;
+    background: lightgoldenrodyellow;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 20px;
+}
+.welcomeLabel{
+
+}
+.welcomeValue{
+    font-weight: 700;
+}
+.empDetails{
+
+}

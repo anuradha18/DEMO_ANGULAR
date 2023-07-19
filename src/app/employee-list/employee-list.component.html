@@ -1,0 +1,94 @@
+<div class="empListView1">
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" class="btn" (click)="load()">Load</button>
+        <button mat-raised-button color="primary" class="btn" type ="button"  (click)="add()" >Add</button>
+    </div>
+
+    <div class="empListView" *ngIf="showEmployeeList">
+        <table mat-table [dataSource]="empList" >
+            <ng-container matColumnDef="userName">
+                <th mat-header-cell *matHeaderCellDef> userName </th>
+                <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+            </ng-container>
+            <ng-container matColumnDef="empId">
+                <th mat-header-cell *matHeaderCellDef> empId </th>
+                <td mat-cell *matCellDef="let element"> {{element.empId}} </td>
+            </ng-container>
+            <ng-container matColumnDef="firstName">
+                <th mat-header-cell *matHeaderCellDef> firstName </th>
+                <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+            </ng-container>
+            <ng-container matColumnDef="lastName">
+                <th mat-header-cell *matHeaderCellDef> lastName </th>
+                <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+            </ng-container>
+            <ng-container matColumnDef="dOB">
+                <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+                <td mat-cell *matCellDef="let element"> {{element.dOB}} </td>
+            </ng-container>
+            <ng-container matColumnDef="dOJ">
+                <th mat-header-cell *matHeaderCellDef> Date of Joining </th>
+                <td mat-cell *matCellDef="let element"> {{element.dOJ}} </td>
+            </ng-container>
+            <ng-container matColumnDef="department">
+                <th mat-header-cell *matHeaderCellDef> Department </th>
+                <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element"><button type ="button" (click)="delete(element)">Delete</button> </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getRecord(row)"></tr>
+            
+        </table>
+    </div>
+    <div *ngIf="showEditForm">
+        <form #empForm="ngForm" *ngIf="showEditForm">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>User Name</mat-label>
+                    <input matInput type="text" id="userName" name="userName" [(ngModel)] = "selectedEmp.userName" required>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Emp ID</mat-label>
+                    <input matInput type="text" id="empId" name="empId" [(ngModel)] = "selectedEmp.empId" required>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" id="firstName" name="firstName" [(ngModel)] = "selectedEmp.firstName" required>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" id="lastName" name="lastName" [(ngModel)] = "selectedEmp.lastName" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>DOJ</mat-label>
+                    <input matInput type="text" id="dOJ" name="dOJ" [(ngModel)] = "selectedEmp.dOJ" required>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>DOB</mat-label>
+                    <input matInput type="text" id="dOB" name="dOB" [(ngModel)] = "selectedEmp.dOB" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Department</mat-label>
+                    <input matInput type="text" id="department" name="department" [(ngModel)] = "selectedEmp.department" required>
+                </mat-form-field>
+            </div>
+            <div class="example-button-row">
+                <button mat-raised-button color="primary" class="btn" type ="button" *ngIf="!showSave" (click)="edit()" [disabled]="!empForm.valid">Edit</button>
+                <button mat-raised-button color="primary" type ="button" class="btn" *ngIf="showSave" (click)="save()" >Save</button>
+                <button mat-raised-button color="primary" class="btn" type ="button"  (click)="cancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+

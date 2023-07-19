@@ -1,0 +1,24 @@
+.header{
+    padding: 20px;
+    background: lightgoldenrodyellow;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 20px;
+}
+.welcomeLabel{
+
+}
+.welcomeValue{
+    font-weight: 700;
+}
+.empDetails{
+    font-size: 16px;
+    padding: 20px;
+}
+.label{
+    margin-right: 10px;
+    font-weight: 400;
+}
+.val{
+    font-weight: 500;
+}

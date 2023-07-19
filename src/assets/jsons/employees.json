@@ -1,0 +1,43 @@
+[
+    {
+      "userName":"Anu",
+      "empId": 101,
+      "firstName": "Anuradha",
+      "lastName": "Gujuri",
+      "dOJ": "7/04/1984",
+      "dOB": "12/04/2018",
+      "department": "IT"
+    },{
+      "userName":"Swetha",
+      "empId": 102,
+      "firstName": "Swetha",
+      "lastName": "K",
+      "dOJ": "10/04/1986",
+      "dOB": "12/04/2016",
+      "department": "IT"
+    },{
+      "userName": "Sudha",
+      "empId": 103,
+      "firstName": "Raga Sudha",
+      "lastName": "L",
+      "dOJ": "01/04/1989",
+      "dOB": "12/04/2021",
+      "department": "IT"
+    },{
+      "userName":"Ramya",
+      "empId": 104,
+      "firstName": "Ramya",
+      "lastName": "K",
+      "dOJ": "03/04/1990",
+      "dOB": "12/04/2020",
+      "department": "CSE"
+    },{
+      "userName": "Namita",
+      "empId": 106,
+      "firstName": "Namita",
+      "lastName": "P",
+      "dOJ": "09 /04/1989",
+      "dOB": "12/04/2021",
+      "department": "CSE"
+    }
+  ]

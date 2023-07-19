@@ -1,0 +1,33 @@
+<div class="header">
+    <p class="welcomeLabel"><span translate>WelCome</span> <span class="welcomeValue">{{empDetails.userName}}</span></p>
+</div>
+<div class="example-button-row">
+    <button mat-raised-button color="primary" class="label" (click) ="changeLanguage('en')" ><span translate>English</span></button>
+    <button mat-raised-button color="primary" class="label" (click) ="changeLanguage('de')" ><span translate>German</span></button>
+</div>
+<div class="empDetails">
+    <p>
+        <label><span class="label" translate>Employee Id Number :</span></label>
+        <span class="val"> {{empDetails.empId}}</span>
+    </p>
+    <p>
+        <label><span class="label" translate>Name :</span></label> 
+        <span class="val"> {{empDetails.firstName}} {{empDetails.lastName}}</span>
+    </p>
+    <p>
+        <label><span class="label" translate>Date of Birth :</span></label>
+        <span class="val">{{empDetails.dOB}}</span>
+    </p>
+    <p>
+        <label><span class="label" translate>Date of Joining :</span></label>
+        <span class="val">{{empDetails.dOJ}}</span>
+    </p>
+    <p>
+        <label><span class="label" translate>Department :</span></label>
+        <span class="val">{{empDetails.department}}</span>
+    </p>
+</div>
+
+<div class="example-button-row">
+    <button mat-raised-button color="primary" (click) ="openEmp()" ><span translate>Employee List</span></button>
+</div>

@@ -1,0 +1,23 @@
+<div class="login">
+    <form #loginForm="ngForm" (ngSubmit)="logIn(loginForm)">
+        <div class="width100">
+            <mat-form-field class="example-full-width">
+                <mat-label>First name</mat-label>
+                <input matInput type="text" id="userName" name="userName" ngModel required>
+            </mat-form-field>
+            <!-- <label for="userName">User Name</label>
+            <input type="text" id="userName" name="" ngModel required> -->
+        </div>
+        <div class="width100">
+            <!-- <label for ="password">Password</label>
+            <input type="password" id="passWord" name="password" ngModel required> -->
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="text" id="password" name="password" ngModel required>
+            </mat-form-field>
+        </div>
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+        </div>
+    </form>
+</div>
